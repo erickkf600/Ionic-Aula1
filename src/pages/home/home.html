@@ -1,18 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-title id="titulo">LOGIN</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content id="content" padding>
+  <ion-list>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+    <button ion-button block (click) = "login()" id="login">LOGIN</button>
+    <button ion-button block outline (click) = 'cadastro()' id="cadastro">CADASTRAR</button>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  </ion-list>
 </ion-content>
