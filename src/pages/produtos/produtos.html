@@ -9,13 +9,13 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let p of produtos">
           <ion-thumbnail item-start>
-            <img src="../assets/imgs/bvs.png">
+            <img src="../assets/imgs/{{p.image}}">
           </ion-thumbnail>
-          <h2>Blu-Ray Batman v Superman</h2>
-          <p>R$ • 40,50</p>
-          <button ion-button clear item-end color='dark' (click)="navProdutoDetalhes()">Detalhes</button>
+          <h2>{{p.nome}}</h2>
+          <p>R$ {{p.preco}}</p>
+          <button ion-button clear item-end color='dark' (click)="navProdutoDetalhes(p)">+Detalhes</button>
         </ion-item>
       </ion-list>
 </ion-content>
