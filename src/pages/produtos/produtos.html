@@ -14,7 +14,7 @@
             <img src="../assets/imgs/{{p.image}}">
           </ion-thumbnail>
           <h2>{{p.nome}}</h2>
-          <p>R$ {{p.preco}}</p>
+          <p>{{produto.preco | currency:'BRL':true:'1.2-2'}}</p>
           <button ion-button clear item-end color='dark' (click)="navProdutoDetalhes(p)">+Detalhes</button>
         </ion-item>
       </ion-list>
